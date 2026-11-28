@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World End ZOMBIE</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #000;
+        color: #ccc;
+        font-family: monospace;
+      }
+      #game {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        image-rendering: pixelated;
+        cursor: pointer;
+      }
+      #overlay {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 24px;
+        letter-spacing: 2px;
+        background: rgba(0, 0, 0, 0.7);
+        pointer-events: none;
+      }
+      .screen h1 {
+        margin: 0 0 24px;
+        font-size: 56px;
+        letter-spacing: 6px;
+        color: #b00;
+        text-shadow: 3px 3px 0 #000;
+      }
+      .screen .prompt {
+        margin: 0 0 24px;
+        animation: blink 1.2s steps(2, start) infinite;
+      }
+      .screen table {
+        margin: 0 auto;
+        border-spacing: 24px 6px;
+        font-size: 20px;
+      }
+      .screen th {
+        text-align: right;
+        color: #e33;
+        font-weight: normal;
+      }
+      .screen td {
+        text-align: left;
+      }
+      .screen table.stats {
+        font-size: 32px;
+      }
+      @keyframes blink {
+        to {
+          visibility: hidden;
+        }
+      }
+      #overlay[hidden] {
+        display: none;
+      }
+      #hud {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+      }
+      #hud[hidden] {
+        display: none;
+      }
+      #hud .flash {
+        position: absolute;
+        inset: 0;
+        background: #c00;
+        opacity: 0;
+      }
+      #hud .message {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 16px;
+        text-align: center;
+        font-size: 24px;
+        letter-spacing: 2px;
+        color: #ddd;
+        text-shadow: 2px 2px 0 #000;
+      }
+      #hud .weapon {
+        position: absolute;
+        left: 50%;
+        bottom: 56px;
+        height: 38vh;
+        transform: translateX(-50%);
+        image-rendering: pixelated;
+        filter: brightness(0.8);
+      }
+      #hud .bar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 56px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #1a1614;
+        border-top: 3px solid #3a302a;
+        font-size: 28px;
+        letter-spacing: 2px;
+        color: #e33;
+        text-shadow: 2px 2px 0 #000;
+      }
+      #hud .label {
+        color: #999;
+        font-size: 18px;
+      }
+      #overlay.error {
+        color: #f55;
+        font-size: 16px;
+        text-align: left;
+        padding: 32px;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-DAYODtrJ.js"></script>
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+    <div id="hud" hidden></div>
+    <div id="overlay"></div>
+  </body>
+</html>

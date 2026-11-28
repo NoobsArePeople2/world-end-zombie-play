@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World End ZOMBIE</title>
+<style>
+  :root { color-scheme: dark; --bg: #0d0f0d; --panel: #171a17; --line: #2b302b; --text: #e6e8e3; --muted: #8d948a; --accent: #b3261e; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 32px 16px 48px; }
+  h1 { margin: 0 0 24px; font-size: clamp(32px, 7vw, 56px); letter-spacing: 0.04em; line-height: 1.1; }
+  h1 b { color: var(--accent); }
+  .latest { display: block; padding: 20px 24px; border-radius: 8px; background: var(--accent); color: #fff; text-decoration: none; font-size: 24px; font-weight: 700; }
+  .latest span { display: block; font-size: 15px; font-weight: 400; opacity: 0.85; }
+  .latest:hover, .latest:focus-visible { filter: brightness(1.15); }
+  .none { background: var(--panel); color: var(--muted); }
+  .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; }
+  @media (max-width: 640px) { .columns { grid-template-columns: 1fr; } }
+  h2 { margin: 0 0 8px; font-size: 18px; }
+  ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  li { border-bottom: 1px solid var(--line); }
+  .head, li { display: flex; gap: 12px; }
+  .head { padding: 0 4px 4px; color: var(--muted); font-size: 13px; }
+  .head span:first-child, li > a { flex: 1; min-width: 0; }
+  .head span:last-child, .editor-cell { flex: none; width: 64px; }
+  li > a { display: flex; flex-wrap: wrap; gap: 0 12px; justify-content: space-between; padding: 10px 4px; color: var(--text); text-decoration: none; }
+  li > a:hover, li > a:focus-visible { background: var(--panel); }
+  .tag { font-family: ui-monospace, monospace; overflow-wrap: anywhere; }
+  .meta { color: var(--muted); font-size: 14px; }
+  .latest-editor { display: inline-block; margin-top: 8px; color: var(--muted); }
+  .editor-cell { padding: 10px 0; }
+  .editor-cell a { color: var(--muted); }
+  .empty { padding: 10px 4px; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+<h1>World End <b>ZOMBIE</b></h1>
+<a class="latest" href="v0.7.0/">Play the latest<span>v0.7.0 · 2026-11-28</span></a>
+<a class="latest-editor" href="v0.7.0/editor/">Open the level editor</a>
+<div class="columns">
+<section>
+<h2>Prior releases</h2>
+<div class="head"><span>Play</span><span>Editor</span></div>
+<ul>
+<li><a href="v0.6.0/"><span class="tag">v0.6.0</span><span class="meta">Release · 2026-11-28</span></a><span class="editor-cell"><a href="v0.6.0/editor/">Editor</a></span></li>
+<li><a href="v0.5.0/"><span class="tag">v0.5.0</span><span class="meta">Release · 2026-11-27</span></a><span class="editor-cell"><a href="v0.5.0/editor/">Editor</a></span></li>
+<li><a href="v0.4.0/"><span class="tag">v0.4.0</span><span class="meta">Release · 2026-11-27</span></a><span class="editor-cell"><a href="v0.4.0/editor/">Editor</a></span></li>
+<li><a href="v0.3.0/"><span class="tag">v0.3.0</span><span class="meta">Release · 2026-11-27</span></a><span class="editor-cell"><a href="v0.3.0/editor/">Editor</a></span></li>
+<li><a href="v0.1.0/"><span class="tag">v0.1.0</span><span class="meta">Release · 2026-11-25</span></a><span class="editor-cell"></span></li>
+</ul>
+</section>
+<section>
+<h2>Preview builds</h2>
+<div class="head"><span>Play</span><span>Editor</span></div>
+<ul>
+<li><a href="v0.4.0-feat128.1/"><span class="tag">v0.4.0-feat128.1</span><span class="meta">Feature Preview · 2026-11-27</span></a><span class="editor-cell"><a href="v0.4.0-feat128.1/editor/">Editor</a></span></li>
+<li><a href="v0.2.0-preview.19/"><span class="tag">v0.2.0-preview.19</span><span class="meta">Preview · 2026-11-26</span></a><span class="editor-cell"></span></li>
+</ul>
+</section>
+</div>
+</main>
+</body>
+</html>
